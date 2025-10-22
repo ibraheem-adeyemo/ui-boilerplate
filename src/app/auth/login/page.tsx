@@ -1,6 +1,4 @@
 'use client'
-
-import { signIn } from 'next-auth/react'
 import { useState } from 'react'
 
 export default function LoginPage() {
@@ -9,7 +7,6 @@ export default function LoginPage() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    await signIn('credentials', { email, password, callbackUrl: '/' })
   }
 
   return (
